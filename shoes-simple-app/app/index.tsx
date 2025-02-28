@@ -1,10 +1,19 @@
 import React, { useEffect, useState } from 'react';
-import { FlatList, View, ActivityIndicator } from 'react-native';
+import { FlatList, View, ActivityIndicator, useWindowDimensions } from 'react-native';
 import ProductListItem from '../components/ProductListItem';
+import { useBreakpointValue } from '@/components/ui/utils/use-break-point-value';
 
 export default function HomeScreen() {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
+  const {width} = useWindowDimensions();
+  const numColumns = width > 700 ? 3 : 2;
+
+  // const numColumns = useBreakpointValue({
+  //   default: "column",
+  //   sm: "row",
+  //   xl:4
+  // });
 
   useEffect(() => {
    
@@ -39,10 +48,12 @@ export default function HomeScreen() {
 
   return (
     <FlatList
+      key={numColumns}
       data={products}
-      numColumns={2}
+      numColumns={numColumns}
       contentContainerClassName='gap-2'
-      columnWrapperClassName='gap-2'
+      columnWrapperClassName='gap-2 mx-w-[960px] w-full mx-auto'
+      className='bg-gray-500'
       keyExtractor={(item) => item.id.toString()}
       renderItem={({ item }) => <ProductListItem product={item} />}
     />

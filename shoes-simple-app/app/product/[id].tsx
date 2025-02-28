@@ -8,6 +8,7 @@ import { Heading } from "@/components//ui/heading";
 import { Box } from "@/components//ui/box";
 import { Button, ButtonText } from "@/components//ui/button";
 import { Text } from "@/components//ui/text";
+import { Stack } from "expo-router";
 
 export default function ProductDetailsScreen() {
   const { id } = useLocalSearchParams();
@@ -41,7 +42,9 @@ export default function ProductDetailsScreen() {
   }
 
   return (
-    <Card  className="p-5 rounded-lg max-w-[560px] m-3 flex-1">
+    <Box className=" flex-1 items-center p-3">
+        <Stack.Screen name="product/[id]" options={{ title: product.title}} />
+    <Card  className="p-5 rounded-lg  max-w-[960px] w-full m-3 flex-1">
 
     <Image
       source={{
@@ -73,5 +76,6 @@ export default function ProductDetailsScreen() {
       </Button>
     </Box>
   </Card>
+  </Box>
   );
 }
