@@ -1,0 +1,63 @@
+[
+    {
+      "id": 1,
+      "name": "Nike Air Max 270",
+      "brand": "Nike",
+      "price": 180.00,
+      "category": "Running",
+      "size": [6, 7, 8, 9, 10, 11],
+      "colors": ["Black", "White", "Red"],
+      "image": "https://example.com/images/nike-air-max-270.png",
+      "description": "A lightweight, breathable shoe designed for maximum comfort and style.",
+      "rating": 4.8
+    },
+    {
+      "id": 2,
+      "name": "Adidas Ultraboost 22",
+      "brand": "Adidas",
+      "price": 190.00,
+      "category": "Running",
+      "size": [6, 7, 8, 9, 10, 11, 12],
+      "colors": ["Blue", "Black", "Gray"],
+      "image": "https://example.com/images/adidas-ultraboost-22.png",
+      "description": "Responsive cushioning and an adaptive fit make this shoe ideal for runners.",
+      "rating": 4.7
+    },
+    {
+      "id": 3,
+      "name": "Puma RS-X",
+      "brand": "Puma",
+      "price": 120.00,
+      "category": "Casual",
+      "size": [7, 8, 9, 10, 11],
+      "colors": ["White", "Black", "Green"],
+      "image": "https://example.com/images/puma-rs-x.png",
+      "description": "A retro-inspired sneaker with a bold design and comfortable fit.",
+      "rating": 4.5
+    },
+    {
+      "id": 4,
+      "name": "New Balance 550",
+      "brand": "New Balance",
+      "price": 130.00,
+      "category": "Basketball",
+      "size": [6, 7, 8, 9, 10, 11, 12],
+      "colors": ["Red", "White", "Blue"],
+      "image": "https://example.com/images/new-balance-550.png",
+      "description": "Classic basketball sneakers with a vintage feel and modern performance.",
+      "rating": 4.6
+    },
+    {
+      "id": 5,
+      "name": "Jordan 1 Retro High",
+      "brand": "Air Jordan",
+      "price": 200.00,
+      "category": "Basketball",
+      "size": [7, 8, 9, 10, 11, 12, 13],
+      "colors": ["Red", "Black", "White"],
+      "image": "https://example.com/images/jordan-1-retro-high.png",
+      "description": "The iconic high-top sneaker that revolutionized basketball footwear.",
+      "rating": 4.9
+    }
+  ]
+  
