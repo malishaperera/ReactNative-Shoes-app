@@ -7,7 +7,7 @@ export default function HomeScreen() {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const { width } = useWindowDimensions();
-  const numColumns = width > 700 ? 3 : 2;
+  const numColumns = width > 500 ? 3 : 2;
 
   useEffect(() => {
     async function fetchData() {
@@ -31,8 +31,8 @@ export default function HomeScreen() {
       key={numColumns}
       data={products}
       numColumns={numColumns}
-      contentContainerClassName="gap-2"
-      columnWrapperClassName="gap-2 mx-w-[960px] w-full mx-auto"
+      contentContainerClassName=""
+      columnWrapperClassName="mx-w-[960px] w-full mx-auto"
       className="bg-gray-500"
       keyExtractor={(item) => item.id.toString()}
       renderItem={({ item }) => <ProductListItem product={item} />}
