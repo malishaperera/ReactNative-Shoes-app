@@ -2,7 +2,7 @@ import "@/global.css";
 import { Link, Stack } from "expo-router";
 import { GluestackUIProvider } from "@/components/ui/gluestack-ui-provider";
 import { Icon } from "@/components/ui/icon";
-import { ShoppingCart } from "lucide-react-native";
+import { ShoppingCart,User } from "lucide-react-native";
 import { View, Text ,FlatList} from "react-native";
 import { Pressable } from "react-native";
 import { useRouter } from "expo-router";
@@ -23,6 +23,14 @@ export default function RootLayout() {
               <Pressable className="flex-row items-center gap-2">
                 <Icon as={ShoppingCart} />
                 <Text>{carItemsNum}</Text>
+              </Pressable>
+            </Link>
+          ),
+          headerLeft: () => 
+            (
+            <Link href="/login" asChild>
+              <Pressable className="flex-row items-center gap-2">
+                <Icon as={User} />
               </Pressable>
             </Link>
           ),
