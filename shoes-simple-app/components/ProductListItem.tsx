@@ -8,6 +8,7 @@ import { Text } from "./ui/text";
 import { Link } from "expo-router";
 import { Pressable } from "react-native";
 
+
 export default function ProductListItem({ product }) {
   return (
     <Link href={`product/${product.id}`} asChild>

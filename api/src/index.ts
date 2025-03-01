@@ -3,6 +3,10 @@ import productsRoutes from './routes/products/index.js';
 import authRoutes from './routes/auth/index.js';
 import ordersRoutes from './routes/orders/index.js';
 import stripeRoutes from './routes/stripe/index.js';
+import dotenv from 'dotenv';
+
+
+dotenv.config();
 
 import serverless from 'serverless-http';
 

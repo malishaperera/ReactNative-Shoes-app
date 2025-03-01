@@ -9,21 +9,34 @@ import { Box } from "@/components//ui/box";
 import { Button, ButtonText } from "@/components//ui/button";
 import { Text } from "@/components//ui/text";
 import { Stack } from "expo-router";
+import { getProductById } from "@/api/product";
 
 export default function ProductDetailsScreen() {
   const { id } = useLocalSearchParams();
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
+  
 
+  // useEffect(() => {
+  //   fetch(`https://dummyjson.com/products/${id}`)
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       setProduct(data);
+  //     })
+  //     .catch((error) => console.error('Error fetching product details:', error))
+  //     .finally(() => setLoading(false));
+  // }, [id]);
   useEffect(() => {
-    fetch(`https://dummyjson.com/products/${id}`)
-      .then((res) => res.json())
-      .then((data) => {
-        setProduct(data);
-      })
-      .catch((error) => console.error('Error fetching product details:', error))
-      .finally(() => setLoading(false));
+    async function fetchProduct() {
+      setLoading(true);
+      const data = await getProductById(Number(id)); // Use the new function
+      setProduct(data);
+      setLoading(false);
+    }
+  
+    fetchProduct();
   }, [id]);
+  
 
   if (loading) {
     return (
